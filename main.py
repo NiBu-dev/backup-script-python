@@ -1,12 +1,13 @@
 import shutil
-import os
 import datetime
+
 
 class Backup:
 
     def __init__(self):
         print 'Start backup process!'
         self.user_in()
+        print 'Copying files process done!'
 
     def user_in(self):
         source_folder = raw_input('Please input the source directory: ')
@@ -26,4 +27,10 @@ class Backup:
             # handle any exception that might occur
             print("Got exception {} while copying {} to {}".format(exc, src, dst))
 
-Backup()
+
+def main():
+    Backup()
+
+
+if __name__ == '__main__':
+    main()
